@@ -1,26 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+$background-color-nav: #fff;
+$font-color-nav: blue;
+$font-menu: 'Open Sans', sans-serif;
+$font-color-menu: #fff;
+$backgroundcolor-menu: rgba(43, 134, 214, 0.8);
+$margin-top-menu: 15px;
+$margin-bottom-menu: 15px;
+$margin-left-menu: -15px;
+$hover-color: blue;
+
 body {
-    margin: 0
-  }
+    margin: 0;
+    background-color: #1445b3}
+  
   
   nav {
-    background-color: pink;
+    background-color: $background-color-nav;
+    color: $font-color-nav;
+    font-size: 30px;
     padding: 20px;
     display: flex;
     justify-content: space-between;
   }
-  
+
+
+
   #menu {
-    background-color: rgba(255, 0, 0, 0.5);
+    padding-top: 10px;
+    background-color: $backgroundcolor-menu;
     width: 200px;
+    font-family:$font-menu;
+    color: $font-color-menu;
     position: absolute;
     top: 0;
     left: -200px;
     height: 100%;
     transition: all 0.5s
   }
+
+  ul {
+      list-style: none;
+      padding-left: 20px;
+      li {
+          margin-top: $margin-top-menu;
+          margin-bottom: $margin-bottom-menu;
+          margin-left: $margin-left-menu;
+          
+          }
+      
+  }
+
+  
+  div {
+    a{
+        font-family: $font-menu;
+    }
+
+  
   
   #menu:target {
-    left: 0px
+    left: 0px;
   }
-  
-  
+
+  .x {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    display: none;
+}
+
+  #menu:target .x{
+    display: block;
+  }
+
+  li:hover {
+      color: $hover-color;
+      transition: 0.3s;
+  }
+
+  a:active, :visited, :link {
+      color: $font-color-menu;
+  }
+  a:hover{
+    color: $hover-color;
+  }
+
+ 
+  }
